@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\ToolsMenu">
+      <UniqueIdentifier>{79dab789-087c-459a-a937-ab8c4b091dac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ToolsMenu">
+      <UniqueIdentifier>{045e393a-2400-4585-887e-aeae544177a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tools">
+      <UniqueIdentifier>{c5d1f5f1-2f30-4e15-9bb8-09a7f3100f4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools">
+      <UniqueIdentifier>{6331af59-9d21-4a7a-882d-8c045152e8e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Drawing">
+      <UniqueIdentifier>{f7df60d9-176a-4e7d-b390-110ed007b8d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Drawing\Shapes">
+      <UniqueIdentifier>{5e2c1572-f0a5-49dd-adf0-fd233a65e902}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Drawing">
+      <UniqueIdentifier>{7182249e-a8a5-4f83-adaa-194e6b884781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Drawing\Shapes">
+      <UniqueIdentifier>{a9c2da5c-e496-42a4-b3d2-8c91479be53b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS_Paint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateToolsMenu.h">
+      <Filter>Header Files\ToolsMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolsMenuEventHandler.h">
+      <Filter>Header Files\ToolsMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolsID.h">
+      <Filter>Header Files\ToolsMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpTools.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Header Files\Drawing\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Pen.h">
+      <Filter>Header Files\Drawing\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Drawing.h">
+      <Filter>Header Files\Drawing</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OS_Paint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateToolsMenu.cpp">
+      <Filter>Source Files\ToolsMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolsMenuEventHandler.cpp">
+      <Filter>Source Files\ToolsMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpTools.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Pen.cpp">
+      <Filter>Source Files\Drawing\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Source Files\Drawing\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Drawing.cpp">
+      <Filter>Source Files\Drawing</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OS_Paint.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="OS_Paint.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
