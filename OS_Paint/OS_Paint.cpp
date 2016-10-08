@@ -159,7 +159,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             HDC hdc = BeginPaint(hWnd, &ps);
             
 			// TODO: Add any drawing code that uses hdc here...
-			//pen.Paint(hdc);
 			printShapes(hdc);
 
             EndPaint(hWnd, &ps);
@@ -173,9 +172,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		pStart.y = HIWORD(lParam);
 		
 		addShape(pStart, idShape);
-		
-	//pen.EditShape(pStart);
-		
+		InvalidateRect(hWnd, 0, true);
 		break;
 	}
 	case WM_LBUTTONUP: {
@@ -193,7 +190,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			pFinish.y = HIWORD(lParam);
 			switch (idShape) {
 			case ID_PEN: {
-				//pen.EditShape(pFinish);
+
 				mouseMove(pFinish);
 
 				InvalidateRect(hWnd, 0, true);
