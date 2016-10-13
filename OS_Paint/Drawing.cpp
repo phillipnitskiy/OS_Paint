@@ -20,9 +20,16 @@ Shape* createShape(POINT point, int id)
 	{
 	case ID_PEN:
 		{
-			Pen* pen = new Pen();
+			Pen *pen = new Pen();
 			pen->EditShape(point);
 			return pen;
+		}
+		break;
+	case ID_TEXT:
+		{
+			Text *text = new Text();
+			text->EditShape(point);
+			return text;
 		}
 		break;
 	default:
@@ -33,6 +40,11 @@ Shape* createShape(POINT point, int id)
 void mouseMove(POINT point)
 {
 	shapes.back()->EditShape(point);
+}
+
+void keyPressed(TCHAR text)
+{
+	shapes.back()->AddText(text);
 }
 
 void printShapes(HDC hdc)

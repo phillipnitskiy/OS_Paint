@@ -1,18 +1,21 @@
 #pragma once
 #include "Shape.h"
 #include <vector>
+#include <xstring>
+
+typedef std::basic_string<TCHAR, std::char_traits<TCHAR>, std::allocator<TCHAR> > String;
 
 using namespace std;
 
-class Pen :
+class Text :
 	public Shape
 {
+private:
+	String data;
 public:
-	Pen();
+	Text();
 	void EditShape(POINT x)override;
 	void Paint(HDC hdc)override;
 	void AddText(TCHAR text)override;
-	~Pen();
-
+	~Text();
 };
-

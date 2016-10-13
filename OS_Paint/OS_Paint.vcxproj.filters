@@ -75,6 +75,9 @@
     <ClInclude Include="Drawing.h">
       <Filter>Header Files\Drawing</Filter>
     </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Header Files\Drawing\Shapes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -100,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="Drawing.cpp">
       <Filter>Source Files\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Source Files\Drawing\Shapes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

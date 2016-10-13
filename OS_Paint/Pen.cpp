@@ -29,6 +29,11 @@ void Pen::Paint(HDC hdc)
 	
 }
 
+void Pen::AddText(TCHAR text) 
+{
+
+}
+
 Pen::~Pen()
 {
 }

@@ -10,6 +10,9 @@
 #include "Shape.h"
 #include "Pen.h"
 #include "Drawing.h"
+#include <xstring>
+
+typedef std::basic_string<TCHAR, std::char_traits<TCHAR>, std::allocator<TCHAR> > String;
 
 #define MAX_LOADSTRING 100
 
@@ -152,6 +155,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
 			HandlingEventMenu(hWnd, LOWORD(wParam), &idShape);
         }
+	case WM_CHAR:
+		{
+			keyPressed((TCHAR)wParam);
+			InvalidateRect(hWnd, 0, true);
+		}
         break;
     case WM_PAINT:
         {

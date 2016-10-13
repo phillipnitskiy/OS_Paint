@@ -55,7 +55,9 @@ HMENU CreateShapeMenu(){
 HMENU CreateActionMenu(){
 	HMENU hActionMenu = CreatePopupMenu();
 	int i = 0;
-	CreateMenuItem(hActionMenu, L"New", i++, 0, NULL, FALSE, MFT_STRING);
+	CreateMenuItem(hActionMenu, L"Color", i++, ID_COLOR, NULL, FALSE, MFT_STRING);
+	CreateMenuItem(hActionMenu, L"Fill", i++, ID_FILL, NULL, FALSE, MFT_STRING);
+	CreateMenuItem(hActionMenu, L"Thickness", i++, ID_THICKNESS, NULL, FALSE, MFT_STRING);
 	return hActionMenu;
 }
 

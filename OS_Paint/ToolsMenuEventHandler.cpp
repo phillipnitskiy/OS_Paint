@@ -9,13 +9,28 @@ void HandlingEventMenu(HWND hWnd, int id, int *shape)
 	case ID_ABOUT: 
 		{
 			CreateAboutBox(hWnd);
-			break;
 		}
+		break;
+	case ID_COLOR:
+		{
+
+		}
+		break;
+	case ID_FILL:
+		{
+
+		}
+		break;
+	case ID_THICKNESS:
+		{
+
+		}
+		break;
 	case ID_EXIT: 
 		{
 			PostQuitMessage(0);
-			break;
 		}
+		break;
 	default: 
 		*shape = id;
 	}
