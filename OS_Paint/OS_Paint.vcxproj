@@ -151,6 +151,7 @@
     <ClInclude Include="Line.h" />
     <ClInclude Include="OS_Paint.h" />
     <ClInclude Include="Pen.h" />
+    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="stdafx.h" />
@@ -166,6 +167,7 @@
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="OS_Paint.cpp" />
     <ClCompile Include="Pen.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

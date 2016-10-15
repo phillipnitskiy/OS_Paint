@@ -39,6 +39,13 @@ Shape* createShape(POINT point, COLORREF color, COLORREF fillColor, int width, i
 			return line;
 		}
 	break;
+	case ID_RECTANGLE:
+		{
+			RectangleS *rectangle = new RectangleS(color, fillColor, width);
+			rectangle->EditShape(point);
+			return rectangle;
+		}
+	break;
 	default:
 		break;
 	}

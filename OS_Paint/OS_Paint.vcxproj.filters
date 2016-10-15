@@ -81,6 +81,9 @@
     <ClInclude Include="Line.h">
       <Filter>Header Files\Drawing\Shapes</Filter>
     </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Header Files\Drawing\Shapes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -111,6 +114,9 @@
       <Filter>Source Files\Drawing\Shapes</Filter>
     </ClCompile>
     <ClCompile Include="Line.cpp">
+      <Filter>Source Files\Drawing\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
       <Filter>Source Files\Drawing\Shapes</Filter>
     </ClCompile>
   </ItemGroup>

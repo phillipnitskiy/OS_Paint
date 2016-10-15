@@ -202,22 +202,30 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			hdc = GetDC(hWnd);
 			pFinish.x = LOWORD(lParam);
 			pFinish.y = HIWORD(lParam);
+
 			switch (idShape) {
-			case ID_PEN: {
-
-				mouseMove(pFinish);
-
-				InvalidateRect(hWnd, 0, true);
+			case ID_PEN: 
+				{
+					mouseMove(pFinish);
+					InvalidateRect(hWnd, 0, true);
+				}
+				break;
+			case ID_LINE: 
+				{
+					mouseMove(pFinish);
+					InvalidateRect(hWnd, 0, true);
+				}
+				break;
+			case ID_RECTANGLE:
+				{
+					mouseMove(pFinish);
+					InvalidateRect(hWnd, 0, true);
+				}
 				break;
 			}
-			case ID_LINE: {
+			
 
-				mouseMove(pFinish);
 
-				InvalidateRect(hWnd, 0, true);
-				break;
-			}
-			}
 			ReleaseDC(hWnd, hdc);
 		}
 		break;
