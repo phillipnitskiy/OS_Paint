@@ -8,7 +8,7 @@ class Pen :
 	public Shape
 {
 public:
-	Pen();
+	Pen(COLORREF, int);
 	void EditShape(POINT x)override;
 	void Paint(HDC hdc)override;
 	void AddText(TCHAR text)override;

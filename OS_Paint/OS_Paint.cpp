@@ -31,12 +31,9 @@ POINT pStart, pFinish;
 BOOL fDraw = FALSE;
 HDC hdc;
 HPEN hPen;
-int border = 1, idShape = ID_PEN;
+int width = 1, idShape = ID_PEN;
 COLORREF color = RGB(0, 0, 0);
-
-Pen pen = Pen();
-
-//std::vector<Shape> shapes;
+COLORREF fillColor = RGB(255, 255, 255);
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -153,12 +150,17 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		break;
     case WM_COMMAND:
         {
-			HandlingEventMenu(hWnd, LOWORD(wParam), &idShape);
+			HandlingEventMenu(hInst ,hWnd, LOWORD(wParam), &idShape, &color, &fillColor, &width);
         }
 	case WM_CHAR:
 		{
-			keyPressed((TCHAR)wParam);
+			if ((TCHAR)wParam < 1000)
+			{
+				keyPressed((TCHAR)wParam);
+			}
+				
 			InvalidateRect(hWnd, 0, true);
+
 		}
         break;
     case WM_PAINT:
@@ -167,7 +169,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             HDC hdc = BeginPaint(hWnd, &ps);
             
 			// TODO: Add any drawing code that uses hdc here...
+			RECT rect;
+			GetClientRect(hWnd, &rect);
+			if(GetOpenningMetafile() != NULL)
+				PlayEnhMetaFile(hdc, GetOpenningMetafile(),&rect);
 			printShapes(hdc);
+
 
             EndPaint(hWnd, &ps);
         }
@@ -179,7 +186,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		pStart.x = LOWORD(lParam);
 		pStart.y = HIWORD(lParam);
 		
-		addShape(pStart, idShape);
+		addShape(pStart, idShape, color, fillColor, width);
 		InvalidateRect(hWnd, 0, true);
 		break;
 	}
@@ -192,8 +199,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_MOUSEMOVE: {
 		if (wParam && MK_LBUTTON) {
 			hdc = GetDC(hWnd);
-			//hPen = CreatePen(PS_SOLID, border, color);
-			//SelectObject(hdc, hPen);
 			pFinish.x = LOWORD(lParam);
 			pFinish.y = HIWORD(lParam);
 			switch (idShape) {
@@ -205,7 +210,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 				break;
 			}
 			}
-			//DeleteObject(hPen);
 			ReleaseDC(hWnd, hdc);
 		}
 		break;

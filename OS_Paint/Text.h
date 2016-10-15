@@ -13,7 +13,7 @@ class Text :
 private:
 	String data;
 public:
-	Text();
+	Text(COLORREF, COLORREF, int);
 	void EditShape(POINT x)override;
 	void Paint(HDC hdc)override;
 	void AddText(TCHAR text)override;

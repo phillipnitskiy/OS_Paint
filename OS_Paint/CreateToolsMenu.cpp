@@ -57,8 +57,21 @@ HMENU CreateActionMenu(){
 	int i = 0;
 	CreateMenuItem(hActionMenu, L"Color", i++, ID_COLOR, NULL, FALSE, MFT_STRING);
 	CreateMenuItem(hActionMenu, L"Fill", i++, ID_FILL, NULL, FALSE, MFT_STRING);
-	CreateMenuItem(hActionMenu, L"Thickness", i++, ID_THICKNESS, NULL, FALSE, MFT_STRING);
+	CreateMenuItem(hActionMenu, L"Width", i++, 0, CreateWidthMenu(), FALSE, MFT_STRING);
+	CreateMenuItem(hActionMenu, L"Cancel", i++, ID_CANCEL, NULL, FALSE, MFT_STRING);
+
 	return hActionMenu;
+}
+
+HMENU CreateWidthMenu() {
+	HMENU hWidthMenu = CreatePopupMenu();
+	int i = 0;
+	CreateMenuItem(hWidthMenu, L"1", i++, ID_WIDTH_1, NULL, FALSE, MFT_STRING);
+	CreateMenuItem(hWidthMenu, L"2", i++, ID_WIDTH_2, NULL, FALSE, MFT_STRING);
+	CreateMenuItem(hWidthMenu, L"3", i++, ID_WIDTH_3, NULL, FALSE, MFT_STRING);
+	CreateMenuItem(hWidthMenu, L"4", i++, ID_WIDTH_4, NULL, FALSE, MFT_STRING);
+	CreateMenuItem(hWidthMenu, L"5", i++, ID_WIDTH_5, NULL, FALSE, MFT_STRING);
+	return hWidthMenu;
 }
 
 HMENU CreateHelpMenu()

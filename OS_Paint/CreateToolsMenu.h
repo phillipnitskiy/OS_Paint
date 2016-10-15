@@ -7,4 +7,5 @@ HMENU CreateShapeMenu();
 HMENU CreateActionMenu();
 HMENU CreateFileMenu();
 HMENU CreateHelpMenu();
+HMENU CreateWidthMenu();
 BOOL CreateMenuItem(HMENU hMenu, LPWSTR str, UINT uIns, UINT uCom, HMENU hSubMenu, BOOL flag, UINT fType);

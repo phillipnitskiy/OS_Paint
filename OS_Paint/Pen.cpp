@@ -1,9 +1,10 @@
 #include "stdafx.h"
 #include "Pen.h"
 
-Pen::Pen()
+Pen::Pen(COLORREF color, int width)
 {
-
+	this->color = color;
+	this->width = width;
 }
 
 void Pen::EditShape(POINT x)
@@ -13,6 +14,9 @@ void Pen::EditShape(POINT x)
 
 void Pen::Paint(HDC hdc)
 {
+	HPEN hpen = CreatePen(PS_SOLID, width, color); 
+	SelectObject(hdc, hpen);
+
 	int points_size = points.size();
 
 	for (int i = 0; i < points_size; i++) {
@@ -22,10 +26,12 @@ void Pen::Paint(HDC hdc)
 		}
 		else
 		{
-			SetPixelV(hdc, points[i].x, points[i].y, RGB(0,0,0));
+			SetPixelV(hdc, points[i].x, points[i].y, color);
 		}
 
 	}
+
+	DeleteObject(hpen);
 	
 }
 
