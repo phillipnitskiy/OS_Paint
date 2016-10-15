@@ -148,6 +148,7 @@
     <ClInclude Include="CreateToolsMenu.h" />
     <ClInclude Include="Drawing.h" />
     <ClInclude Include="HelpTools.h" />
+    <ClInclude Include="Line.h" />
     <ClInclude Include="OS_Paint.h" />
     <ClInclude Include="Pen.h" />
     <ClInclude Include="Resource.h" />
@@ -162,6 +163,7 @@
     <ClCompile Include="CreateToolsMenu.cpp" />
     <ClCompile Include="Drawing.cpp" />
     <ClCompile Include="HelpTools.cpp" />
+    <ClCompile Include="Line.cpp" />
     <ClCompile Include="OS_Paint.cpp" />
     <ClCompile Include="Pen.cpp" />
     <ClCompile Include="Shape.cpp" />

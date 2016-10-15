@@ -9,6 +9,7 @@
 #include <vector>
 #include "Shape.h"
 #include "Pen.h"
+#include "Line.h"
 #include "Drawing.h"
 #include <xstring>
 
@@ -203,6 +204,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			pFinish.y = HIWORD(lParam);
 			switch (idShape) {
 			case ID_PEN: {
+
+				mouseMove(pFinish);
+
+				InvalidateRect(hWnd, 0, true);
+				break;
+			}
+			case ID_LINE: {
 
 				mouseMove(pFinish);
 

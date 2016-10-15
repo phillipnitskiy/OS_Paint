@@ -32,6 +32,13 @@ Shape* createShape(POINT point, COLORREF color, COLORREF fillColor, int width, i
 			return text;
 		}
 		break;
+	case ID_LINE:
+		{
+			Line *line = new Line(color, width);
+			line->EditShape(point);
+			return line;
+		}
+	break;
 	default:
 		break;
 	}

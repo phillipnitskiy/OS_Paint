@@ -2,6 +2,7 @@
 #include "ToolsID.h"
 #include "Pen.h"
 #include "Text.h"
+#include "Line.h"
 
 void addShape(POINT, int, COLORREF, COLORREF, int);
 void mouseMove(POINT);
